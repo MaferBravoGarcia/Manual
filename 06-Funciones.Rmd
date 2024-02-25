@@ -72,7 +72,7 @@ mi_funcion(3, 5)
 ```
 
 
-# Definir una función con un parámetro opcional
+## Definir una función con un parámetro opcional
 
 ```{r}
 saludar <- function(nombre, saludo = "Hola") {
@@ -82,30 +82,28 @@ saludar <- function(nombre, saludo = "Hola") {
 ```
 
 
-# Llamar a la función saludar sin proporcionar el parámetro opcional
+## Llamar a la función saludar sin proporcionar el parámetro opcional
 ```{r}
 mensaje1 <- saludar("Juan")
 print(mensaje1)
 ```
 
-# Llamar a la función saludar proporcionando el parámetro opcional
+## Llamar a la función saludar proporcionando el parámetro opcional
 
 ```{r}
 mensaje2 <- saludar("María", "Buenos días")
 print(mensaje2)
 ```
 
-# Definir una función para calcular el área de un círculo
+## Definir una función para calcular el área de un círculo
 
 ```{r}
 area_circulo <- function(radio) {
   area <- pi * radio^2
   return(area)
 }
-```
-
 # Ejemplo de uso
-```{r}
+
 radio <- 3
 area <- area_circulo(radio)
 print(paste("El área del círculo con radio", radio, "es:", area))
