@@ -109,6 +109,55 @@ area <- area_circulo(radio)
 print(paste("El área del círculo con radio", radio, "es:", area))
 ```
 
+## Definir una función para calcular el factorial de un número
+
+```{r}
+factorial <- function(n) {
+  if (n == 0) {
+    return(1)
+  } else {
+    return(n * factorial(n - 1))
+  }
+}
+
+# Ejemplo de uso
+numero <- 5
+resultado <- factorial(numero)
+print(paste("El factorial de", numero, "es:", resultado))
+```
+
+## Definir una función para verificar si un número es primo
+
+```{r}
+es_primo <- function(n) {
+  if (n <= 1) {
+    return(FALSE)
+  } else if (n <= 3) {
+    return(TRUE)
+  } else if (n %% 2 == 0 | n %% 3 == 0) {
+    return(FALSE)
+  }
+  i <- 5
+  while (i * i <= n) {
+    if (n %% i == 0 | n %% (i + 2) == 0) {
+      return(FALSE)
+    }
+    i <- i + 6
+  }
+  return(TRUE)
+}
+
+# Ejemplo de uso
+numero <- 11
+if (es_primo(numero)) {
+  print(paste(numero, "es un número primo."))
+} else {
+  print(paste(numero, "no es un número primo."))
+}
+```
+
+
+
 **Ejercicios**
 
 1. Escribe una función que tome un vector numérico como argumento de entrada y devuelva la media aritmética de los valores.
