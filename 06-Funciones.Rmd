@@ -79,18 +79,15 @@ saludar <- function(nombre, saludo = "Hola") {
   mensaje <- paste(saludo, nombre)
   return(mensaje)
 }
-```
 
 
-## Llamar a la función saludar sin proporcionar el parámetro opcional
-```{r}
+# Llamar a la función saludar sin proporcionar el parámetro opcional
 mensaje1 <- saludar("Juan")
 print(mensaje1)
-```
 
-## Llamar a la función saludar proporcionando el parámetro opcional
 
-```{r}
+# Llamar a la función saludar proporcionando el parámetro opcional
+
 mensaje2 <- saludar("María", "Buenos días")
 print(mensaje2)
 ```
