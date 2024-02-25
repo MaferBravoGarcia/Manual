@@ -4,6 +4,7 @@
 # Funciones en R {#functions}
 
 Las funciones definidas por el usuario en R son bloques de código que realizan una tarea específica y se pueden llamar desde cualquier lugar del programa. Las funciones en R se definen usando la palabra clave function seguida del nombre de la función, paréntesis y llaves. Las funciones toman argumentos de entrada y producen un resultado como salida.
+Las funciones definidas por el usuario son una herramienta poderosa en R que permiten reutilizar código y automatizar tareas. Una vez que domines la sintaxis básica de la función en R, puedes comenzar a crear funciones más avanzadas y complejas para adaptarse a tus necesidades. 
 
 ## Sintaxis básica de una función en R
 La sintaxis básica para definir una función en R es la siguiente:
@@ -70,7 +71,21 @@ También puede proporcionar un valor diferente para y, si es necesario:
 mi_funcion(3, 5)
 ```
 
-Las funciones definidas por el usuario son una herramienta poderosa en R que permiten reutilizar código y automatizar tareas. Una vez que domines la sintaxis básica de la función en R, puedes comenzar a crear funciones más avanzadas y complejas para adaptarse a tus necesidades. 
+
+# Definir una función con un parámetro opcional
+saludar <- function(nombre, saludo = "Hola") {
+  mensaje <- paste(saludo, nombre)
+  return(mensaje)
+}
+
+# Llamar a la función saludar sin proporcionar el parámetro opcional
+mensaje1 <- saludar("Juan")
+print(mensaje1)
+
+# Llamar a la función saludar proporcionando el parámetro opcional
+mensaje2 <- saludar("María", "Buenos días")
+print(mensaje2)
+
 
 **Ejercicios**
 
