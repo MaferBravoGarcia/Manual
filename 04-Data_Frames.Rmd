@@ -25,6 +25,8 @@ print(dna_data)
 
 
 
+En este ejemplo, el dataframe tiene tres columnas: "secuencia", "tamaño" y "contenido_GC". La columna "secuencia" contiene cadenas de caracteres (strings) que representan las bases del ADN, mientras que las otras dos columnas contienen valores numéricos.
+
 Podemos crear un DataFrame en R utilizando la función `data.frame()`. Aquí hay un ejemplo de cómo crear un DataFrame simple con datos de estudiantes:
 
 ```{r}
@@ -37,7 +39,8 @@ estudiantes <- data.frame(
 
 # Ver el DataFrame
 print(estudiantes)
-En este ejemplo, el dataframe tiene tres columnas: "secuencia", "tamaño" y "contenido_GC". La columna "secuencia" contiene cadenas de caracteres (strings) que representan las bases del ADN, mientras que las otras dos columnas contienen valores numéricos.
+```
+
 
 ## Acceder a los datos de un dataframe
 
