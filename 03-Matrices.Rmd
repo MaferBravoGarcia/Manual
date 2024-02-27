@@ -94,6 +94,17 @@ matriz2 <- matrix(7:12, nrow = 2)
 matriz_unida <- rbind(matriz1, matriz2)
 matriz_unida
 ```
+## Uso de cbind() para unir matrices por columnas
+
+La función cbind() se utiliza para unir matrices por columnas. A continuación, se muestra un ejemplo de cómo unir dos matrices por columnas:
+
+```{r}
+Copy code
+# Unir matrices por columnas
+matriz_unida_columnas <- cbind(matriz1, matriz2)
+matriz_unida_columnas
+```
+
 
 **Ejercicio** 
 
@@ -141,6 +152,15 @@ m %*% n
 ¿Recuerdas cuál es el criterio para calcular el producto de matrices?
 ¿Recuerdas cómo se multiplican dos matrices?
 
+## Uso de la función `t()` para transponer una matriz
+
+La función `t()` se utiliza para transponer una matriz, es decir, intercambiar filas por columnas y viceversa. Veamos un ejemplo:
+
+```{r}
+# Transponer una matriz
+matriz_transpuesta <- t(matriz_unida_columnas)
+matriz_transpuesta
+```
 
 ## Seleccionar elementos de matrices
 
