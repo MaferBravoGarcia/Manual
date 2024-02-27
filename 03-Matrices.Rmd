@@ -27,6 +27,8 @@ m <- matrix(c(1,2,3,4,5,6),nrow=2,byrow=TRUE)
 m
 ```
 
+
+
  
 ## Dimensiones de un matriz
 La dimensión de una matriz es el número de renglones y de columnas respectivamente. Se puede obtener usando la función `dim()` de *dimensión*. 
@@ -72,6 +74,25 @@ y[2,1] <- "es"
 y[1,2] <- "una"
 y[2,2] <- "matriz"
 y
+```
+
+
+# Operaciones rbind y cbind en R para Matrices
+
+En R, las funciones `rbind()` y `cbind()` se utilizan para unir matrices por filas y columnas, respectivamente. Además, la función `t()` se utiliza para transponer una matriz.
+
+## Uso de `rbind()` para unir matrices por filas
+
+La función `rbind()` se utiliza para unir matrices por filas. Por ejemplo, considera las siguientes dos matrices:
+
+```{r}
+# Matrices de ejemplo
+matriz1 <- matrix(1:6, nrow = 2)
+matriz2 <- matrix(7:12, nrow = 2)
+
+# Unir matrices por filas
+matriz_unida <- rbind(matriz1, matriz2)
+matriz_unida
 ```
 
 **Ejercicio** 
