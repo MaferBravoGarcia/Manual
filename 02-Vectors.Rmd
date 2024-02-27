@@ -714,6 +714,25 @@ levels(meses)
 meses
 ```
 
+## Ejercicio: Temperaturas de Incubación
+
+Supongamos que estamos realizando un experimento de cultivo bacteriano y registramos las temperaturas de incubación para diferentes muestras. Queremos calcular la temperatura media y la desviación estándar.
+
+
+```{r}
+# Temperaturas de incubación (en grados Celsius)
+temperaturas <- c(37, 37, 25, 30, 30, 37, 25, 25)
+
+# Cálculo de la temperatura media
+temp_media <- mean(temperaturas)
+cat("Temperatura media:", temp_media, "°C\n")
+
+# Cálculo de la desviación estándar
+temp_desviacion <- sd(temperaturas)
+cat("Desviación estándar:", temp_desviacion, "°C\n")
+```
+
+
 **Ejercicio** 
 1. Lee la ayuda de `as.factor` para determinar cómo crear un factor "ordenado"
 2. Crea un vector con los meses en los que todas las alumnas del grupo cumplen años.
