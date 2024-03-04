@@ -99,7 +99,6 @@ matriz_unida
 La función cbind() se utiliza para unir matrices por columnas. A continuación, se muestra un ejemplo de cómo unir dos matrices por columnas:
 
 ```{r}
-Copy code
 # Unir matrices por columnas
 matriz_unida_columnas <- cbind(matriz1, matriz2)
 matriz_unida_columnas

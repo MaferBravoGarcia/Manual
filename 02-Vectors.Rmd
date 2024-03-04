@@ -18,8 +18,8 @@ Para conocer el contenido de una variable, sólo es necesario poner la variable 
 
 Ejemplo: 
 ```{r}
-x
-
+x<-3
+print(x)
 ```
 
 # Vectores en R {#vectors} 
@@ -748,28 +748,6 @@ muestras_optimas <- names(temperaturas_optimas)
 cat("Muestras con temperatura óptima:", muestras_optimas, "\n")
 ```
 
-### Ejemplo: Detección de Secuencias Específicas
-
-Supongamos que tenemos un vector de secuencias de ADN y queremos identificar si alguna de las secuencias contiene un motivo específico, como "AGCT".
-
-```{r}
-Copy code
-# Secuencias de ADN
-secuencias <- c("ATCGATCG", "GCTAGCTA", "TATATATA")
-
-# Función para detectar secuencias específicas
-detectar_motivo <- function(secuencia, motivo) {
-  any(str_detect(secuencia, motivo))
-}
-
-# Motivo a detectar
-motivo <- "AGCT"
-
-# Detección de secuencias con el motivo
-secuencias_con_motivo <- secuencias[sapply(secuencias, detectar_motivo, motivo)]
-
-cat("Secuencias con el motivo", motivo, ":", secuencias_con_motivo, "\n")
-```
 
 
 **Ejercicio** 
