@@ -24,11 +24,10 @@ Una buena gestión de proyectos en R implica una estructura de carpetas organiza
 
 **Estructura de carpetas recomendada:**
 
-- `/R`: Guarda los scripts de R (.R o .Rmd).
-- `/data`: Almacena los conjuntos de datos originales (preferentemente en formato de solo lectura como .csv o .xlsx).
-- `/doc`: Contiene documentos relacionados, como manuscritos.
-- `/figs`: Guarda las figuras generadas por tus scripts.
-- `/output`: Almacena archivos de salida procesados, como datos limpios o tablas resumen.
+- `/01_RawData`: Guarda tus bases de datos originales (preferentemente en formato de solo lectura como .csv o .xlsx)..
+- `/02_Scripts`: Guardar tus scripts con extensiones .R o .Rmd 
+- `/03_ProceesedData`: Almacena archivos de salida procesados, como datos limpios o tablas resumen
+- `/04_output`: .Guarda las figuras generadas por tus scripts.
 
 **Buenas prácticas:**
 
