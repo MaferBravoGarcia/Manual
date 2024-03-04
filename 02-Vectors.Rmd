@@ -4,7 +4,7 @@ output:
   html_document: default
 ---
 
-# Estructura de los Datos {#estructura} 
+# Vectores {#estructura} 
 
 R permite manejar datos dentro de estructuras para poder trabajarlos, estas estructuras pueden ser: 
 - Vector: Es de una sola dimensión y solo permite almacenar datos del mismo tipo. 
