@@ -1,3 +1,20 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+  bibliography: book.bib
+  biblio-style: apalike
+---
 `r if (knitr:::is_html_output()) '
-# References {-}
-'`
+
+@xie2015
+@martinez2009universality
+@irizarry2021introduccion
+@RProject
+@maindonald2008using
+@rossiter2012introduction
+@wilkinson2012grammar
+@wickham2023r
+@hastie2009elements
+
+# Referencias {-}
