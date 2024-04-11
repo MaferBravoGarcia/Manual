@@ -4,29 +4,6 @@
 Un Dataframe en R es una estructura de datos rectangular que se compone de filas y columnas, donde cada columna puede tener un tipo de datos diferente. Los Dataframes son una de las estructuras de datos más utilizadas en R, ya que son la forma estándar de almacenar datos tabulares.
 
 ## Crear un Dataframe en R
-Para crear un Dataframe en R, puedes utilizar la función `data.frame()`. 
-Por ejemplo, para crear un Dataframe con información del genoma de algunos microorganismos, podrías escribir lo siguiente:
-
-```{r}
-ventas <- data.frame(
-  mes = c("enero", "febrero", "marzo", "abril"),
-  productos_vendidos = c(10, 15, 20, 25),
-  ingresos = c(100, 150, 200, 250)
-)
-
-dna_data <- data.frame(
-  secuencia = c("ATCGATCG", "GCTAGCTA", "TTAAGGCT"),
-  tamaño = c(8, 8, 8),
-  contenido_GC = c(0.5, 0.4, 0.3)
-)
-
-print(dna_data)
-```
-
-
-
-En este ejemplo, el dataframe tiene tres columnas: "secuencia", "tamaño" y "contenido_GC". La columna "secuencia" contiene cadenas de caracteres (strings) que representan las bases del ADN, mientras que las otras dos columnas contienen valores numéricos.
-
 Podemos crear un DataFrame en R utilizando la función `data.frame()`. Aquí hay un ejemplo de cómo crear un DataFrame simple con datos de estudiantes:
 
 ```{r}
@@ -41,6 +18,25 @@ estudiantes <- data.frame(
 print(estudiantes)
 ```
 
+
+Para crear un Dataframe en R, puedes utilizar la función `data.frame()`. 
+Por ejemplo, para crear un Dataframe con información del genoma de algunos microorganismos, podrías escribir lo siguiente:
+
+```{r}
+dna_data <- data.frame(
+  secuencia = c("ATCGATCG", "GCTAGCTA", "TTAAGGCT"),
+  tamaño = c(8, 8, 8),
+  contenido_GC = c(0.5, 0.4, 0.3)
+)
+
+print(dna_data)
+```
+**NOTA** También puedes emplear `View()` para visualizar el DataFrame. 
+```{r}
+View(dna_data)
+```
+
+En este ejemplo, el dataframe tiene tres columnas: "secuencia", "tamaño" y "contenido_GC". La columna "secuencia" contiene cadenas de caracteres (strings) que representan las bases del ADN, mientras que las otras dos columnas contienen valores numéricos.
 
 ## Acceder a los datos de un dataframe
 
@@ -66,35 +62,25 @@ Esto devolvería un Dataframe con dos filas y dos columnas.
 
 ## Agregar y eliminar filas y columnas en un Dataframe en R
 Para agregar una nueva columna a un Dataframe en R, puedes utilizar el operador de asignación `<-`. 
-Por ejemplo, para agregar una columna que represente el precio de venta de cada producto en el Dataframe "ventas", podrías escribir lo siguiente:
+Por ejemplo, para agregar una columna que represente la Temperatura de Melting (o Fusión) en el Dataframe "dna_data", podrías escribir lo siguiente:
+
+```{r}
+dna_data$temperatura_melting <- c(24, 24, 20)
+```
+
+Esto crearía una nueva columna llamada "temperatura_melting" en el Dataframe "dna_data" y la inicializaría con los valores proporcionados.
+
+Para eliminar una columna de un Dataframe en R, puedes utilizar el operador de subíndice`[]` con un valor nulo para la columna que deseas eliminar. Por ejemplo, para eliminar la columna "temperatura_melting" del Dataframe "dna_data", podrías escribir lo siguiente:
 
 
 ```{r}
-ventas$precio_venta <- c(20, 25, 30, 35)
+dna_data$temperatura_melting <- NULL
 ```
 
-Esto crearía una nueva columna llamada "precio_venta" en el Dataframe "ventas" y la inicializaría con los valores proporcionados.
+Para agregar una nueva fila a un Dataframe en R, puedes utilizar la función `rbind()`. ¿También se puede aplicar `cbind()` en Dataframe?
 
-Para eliminar una columna de un Dataframe en R, puedes utilizar el operador de subíndice`[]` con un valor nulo para la columna que deseas eliminar. Por ejemplo, para eliminar la columna "precio_venta" del Dataframe "ventas", podrías escribir lo siguiente:
-
-
-```{r}
-ventas$precio_venta <- NULL
-```
-
-
-Para agregar una nueva fila a un Dataframe en R, puedes utilizar la función `rbind()`. Por ejemplo, para agregar una fila que represente las ventas de mayo al Dataframe "ventas", podrías escribir lo siguiente:
-
-```{r}
-ventas <- rbind(
-  ventas,
-  data.frame(
-    mes = "mayo",
-    productos_vendidos = 30,
-    ingresos = 300
-  )
-)
-```
+**Ejercicio** 
+Empleando la siguiente fórmula para calcular la Temperatura de Fusión:  `Tm=4(G+C)+2(A+T)`, diseña una secuencia que cumpla con una Tm de 55°. Agrega sus características (secuencia, tamaño, cantidad GC & Tm) en una nueva fila. También será necesario agregar la columna Tm para indicar la Temperatura de Fusión de cada secuencia. Usa el Dataframe `dna_data` como base. 
 
 # Importar un archivo csv en R
 
