@@ -22,7 +22,7 @@ x<-3
 print(x)
 ```
 
-# Vectores en R {#vectors} 
+## Vectores en R {#vectors} 
 
 Un *vector* es una colección de datos del mismo tipo, siempre del **mismo tipo**, no es posible mezclarlos. Los elementos contenidos dentro de un vector son conocidos como *componentes* y pueden ser del tipo lógico, caracteres, numéricos o integer.
 
